@@ -7,6 +7,8 @@ import 'dart:async' as _i4;
 import 'dart:ui' as _i5;
 
 import 'package:flutter/material.dart' as _i3;
+import 'package:mahalikenya/services/activities_api_service.dart' as _i8;
+import 'package:mahalikenya/services/activities_service.dart' as _i7;
 import 'package:mahalikenya/services/authentication_service.dart' as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i2;
@@ -668,3 +670,14 @@ class MockAuthenticationService extends _i1.Mock
         returnValueForMissingStub: false,
       ) as bool);
 }
+
+/// A class which mocks [ActivitiesService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockActivitiesService extends _i1.Mock implements _i7.ActivitiesService {}
+
+/// A class which mocks [ActivitiesApiService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockActivitiesApiService extends _i1.Mock
+    implements _i8.ActivitiesApiService {}

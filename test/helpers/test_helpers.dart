@@ -3,7 +3,8 @@ import 'package:mockito/mockito.dart';
 import 'package:mahalikenya/app/app.locator.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:mahalikenya/services/authentication_service.dart';
-import 'package:mahalikenya/services/feathers_service.dart';
+import 'package:mahalikenya/services/activities_service.dart';
+import 'package:mahalikenya/services/activities_api_service.dart';
 // @stacked-import
 
 import 'test_helpers.mocks.dart';
@@ -13,7 +14,8 @@ import 'test_helpers.mocks.dart';
   MockSpec<BottomSheetService>(onMissingStub: OnMissingStub.returnDefault),
   MockSpec<DialogService>(onMissingStub: OnMissingStub.returnDefault),
   MockSpec<AuthenticationService>(onMissingStub: OnMissingStub.returnDefault),
-  MockSpec<FeathersService>(onMissingStub: OnMissingStub.returnDefault),
+  MockSpec<ActivitiesService>(onMissingStub: OnMissingStub.returnDefault),
+  MockSpec<ActivitiesApiService>(onMissingStub: OnMissingStub.returnDefault),
 // @stacked-mock-spec
 ])
 void registerServices() {
@@ -21,7 +23,9 @@ void registerServices() {
   getAndRegisterBottomSheetService();
   getAndRegisterDialogService();
   getAndRegisterAuthenticationService();
- // @stacked-mock-register
+  getAndRegisterActivitiesService();
+  getAndRegisterActivitiesApiService();
+// @stacked-mock-register
 }
 
 MockNavigationService getAndRegisterNavigationService() {
@@ -81,6 +85,19 @@ MockAuthenticationService getAndRegisterAuthenticationService() {
   return service;
 }
 
+MockActivitiesService getAndRegisterActivitiesService() {
+  _removeRegistrationIfExists<ActivitiesService>();
+  final service = MockActivitiesService();
+  locator.registerSingleton<ActivitiesService>(service);
+  return service;
+}
+
+MockActivitiesApiService getAndRegisterActivitiesApiService() {
+  _removeRegistrationIfExists<ActivitiesApiService>();
+  final service = MockActivitiesApiService();
+  locator.registerSingleton<ActivitiesApiService>(service);
+  return service;
+}
 // @stacked-mock-create
 
 void _removeRegistrationIfExists<T extends Object>() {

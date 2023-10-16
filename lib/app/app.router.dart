@@ -198,6 +198,10 @@ extension NavigatorStateExtension on _i9.NavigationService {
         transition: transition);
   }
 
+
+
+
+
   Future<dynamic> replaceWithHomeView([
     int? routerId,
     bool preventDuplicates = true,
@@ -268,6 +272,10 @@ extension NavigatorStateExtension on _i9.NavigationService {
         transition: transition);
   }
 
+
+
+
+
   Future<dynamic> replaceWithEventsView([
     int? routerId,
     bool preventDuplicates = true,
@@ -281,4 +289,6 @@ extension NavigatorStateExtension on _i9.NavigationService {
         parameters: parameters,
         transition: transition);
   }
+
+
 }
