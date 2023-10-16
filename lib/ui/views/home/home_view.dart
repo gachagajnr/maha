@@ -28,7 +28,7 @@ class HomeView extends StackedView<HomeViewModel> {
           showSelectedLabels: true,
           currentIndex: model.currentIndex,
           onTap: model.setIndex,
-          items:  [
+          items: [
             const BottomNavigationBarItem(
               label: 'Activities',
               icon: Icon(Icons.checklist_rounded),
@@ -44,7 +44,7 @@ class HomeView extends StackedView<HomeViewModel> {
                 ),
               ),
             ),
-           const BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               label: 'Profile',
               icon: Icon(Icons.account_circle),
             ),

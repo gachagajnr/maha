@@ -9,9 +9,7 @@ import 'package:mahalikenya/services/authentication_service.dart';
 import 'package:mahalikenya/ui/views/activities/activities_view.dart';
 import 'package:mahalikenya/ui/views/profile/profile_view.dart';
 import 'package:mahalikenya/ui/views/events/events_view.dart';
-import 'package:mahalikenya/ui/views/events/events_view.dart';
-import 'package:mahalikenya/ui/views/events/events_view.dart';
-import 'package:mahalikenya/ui/views/events/events_view.dart';
+import 'package:mahalikenya/services/feathers_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -32,6 +30,7 @@ import 'package:mahalikenya/ui/views/events/events_view.dart';
     LazySingleton(classType: DialogService),
     LazySingleton(classType: NavigationService),
     LazySingleton(classType: AuthenticationService),
+    LazySingleton(classType: FeathersService),
 // @stacked-service
   ],
   bottomsheets: [

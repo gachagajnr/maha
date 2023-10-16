@@ -29,7 +29,6 @@ class Routes {
 
   static const eventsView = '/events-view';
 
-
   static const all = <String>{
     homeView,
     startupView,
@@ -66,7 +65,6 @@ class StackedRouter extends _i1.RouterBase {
       Routes.eventsView,
       page: _i7.EventsView,
     ),
-
   ];
 
   final _pagesMap = <Type, _i1.StackedRouteFactory>{
@@ -186,7 +184,6 @@ extension NavigatorStateExtension on _i9.NavigationService {
         transition: transition);
   }
 
-
   Future<dynamic> navigateToEventsView([
     int? routerId,
     bool preventDuplicates = true,
@@ -284,6 +281,4 @@ extension NavigatorStateExtension on _i9.NavigationService {
         parameters: parameters,
         transition: transition);
   }
-
-
 }

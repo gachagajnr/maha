@@ -11,9 +11,7 @@ class ActivitiesView extends StackedView<ActivitiesViewModel> {
     BuildContext context,
     ActivitiesViewModel viewModel,
     Widget? child,
-
   ) {
-
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
@@ -25,7 +23,6 @@ class ActivitiesView extends StackedView<ActivitiesViewModel> {
   @override
   ActivitiesViewModel viewModelBuilder(
     BuildContext context,
-
   ) =>
       ActivitiesViewModel();
 }
